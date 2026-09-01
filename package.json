@@ -4,6 +4,10 @@
   "description": "logger",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./transports/*": "./dist/transports/*.js"
+  },
   "files": [
     "dist"
   ],

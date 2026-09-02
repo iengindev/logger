@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-import { LEVELS, type Enrty, type Level, type Transport } from './@types/logger.js'
+import { LEVELS, type Entry, type Level, type Transport } from './@types/logger.js'
 
 const getPackageMetadata = (): { name: string, version: string, author: string } => {
   const { name, version, author } = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'))
@@ -43,7 +43,7 @@ export class Logger {
   private level: Level
   private transports: Transport[]
 
-  constructor (options: LoggerOptions = {}) {
+  constructor(options: LoggerOptions = {}) {
     this.level = options.level ?? 'info'
     this.transports = options.transports ?? []
 
@@ -60,7 +60,7 @@ export class Logger {
   private emit(level: Level, message: string): void {
     if (LEVELS[level] < LEVELS[this.level]) return
 
-    const entry: Enrty = {
+    const entry: Entry = {
       level: level,
       timestamp: new Date().toISOString(),
       message: message

@@ -1,11 +1,11 @@
-import { LEVELS, type Enrty, type Level, type Transport } from '../@types/logger.js'
+import { LEVELS, type Entry, type Level, type Transport } from '../@types/logger.js'
 
 export abstract class BaseTransport implements Transport {
-  constructor (public level: Level = 'info') {}
+  constructor(public level: Level = 'info') {}
 
   protected isLevelEnabled(level: Level): boolean {
     return LEVELS[level] > LEVELS[this.level]
   }
 
-  abstract write(enrty: Enrty): void | Promise<void>
+  abstract write(entry: Entry): void | Promise<void>
 }

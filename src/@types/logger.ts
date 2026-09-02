@@ -9,7 +9,7 @@ export const LEVELS = {
 
 export type Level = keyof typeof LEVELS
 
-export interface Enrty {
+export interface Entry {
   level:      Level
   timestamp:  string
   message:    string
@@ -17,5 +17,5 @@ export interface Enrty {
 
 export interface Transport {
   level?:     Level
-  write:      (enrty: Enrty) => void | Promise<void>
+  write:      (entry: Entry) => void | Promise<void>
 }

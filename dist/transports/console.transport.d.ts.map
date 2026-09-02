@@ -1,0 +1,1 @@
+{"version":3,"file":"console.transport.d.ts","sourceRoot":"","sources":["../../src/transports/console.transport.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,qBAAqB,CAAA;AAEnD,OAAO,KAAK,EAAE,KAAK,EAAE,MAAM,qBAAqB,CAAA;AAEhD,qBAAa,gBAAiB,SAAQ,aAAa;IACjD,KAAK,CAAC,KAAK,EAAE,KAAK,GAAG,IAAI,CAKxB;CACF"}
